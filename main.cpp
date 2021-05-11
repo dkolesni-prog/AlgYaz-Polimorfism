@@ -32,10 +32,20 @@ int main() {
     Thermic_process* const test4 = new Izobar(3, 2, 100);
     processess.push_back(test4);
 
-    for (int i = 0; i < n; ++i) {
-        processess[i]->work();
-        processess[i]->print();
+//    for (int i = 0; i < n; ++i) { // auto
+//        processess[i]->work();
+//        processess[i]->print();
+//        std::cout << "----------------------" << std::endl;
+//    }
+
+    for (auto i: processess) { // auto
+        i->print();
         std::cout << "----------------------" << std::endl;
     }
+    delete test1;
+    delete test2;
+    delete test3;
+    delete test4;
+
     return 0;
 }

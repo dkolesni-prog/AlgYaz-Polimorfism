@@ -21,6 +21,6 @@ Izobar::Izobar(float V1, float V2, float P) : Thermic_process(V1, V2, P) {
 }
 
 float Izobar::work() {
-    A = P - (V2 - V1);
-    return 5 ;
+    A = P * (V2 - V1);
+    return A ;
 }

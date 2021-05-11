@@ -22,6 +22,7 @@ Thermic_process::Thermic_process(float _V1, float _V2, float _P) : V1(_V1), V2(_
 }
 
 void Thermic_process::print() {
+    A = P * (V2 - V1);
     if (A != 0){
         std::cout << "A = " << A << std::endl;
         std::cout << "V1 = " << V1 << std::endl;
